@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignedOut } from "@clerk/nextjs";
+import GuestLogin from "./GuestLogin";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,7 +29,14 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {children}
+          <main className="h-screen w-screen overflow-hidden">
+            <div className="flex justify-end">
+              <SignedOut>
+                <GuestLogin />
+              </SignedOut>
+            </div>
+            {children}
+          </main>
         </body>
       </html>
     </ClerkProvider>
