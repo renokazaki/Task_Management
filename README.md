@@ -3,8 +3,9 @@
 
 ## デモ
 
-以下のリンクからデプロイされたアプリをお試しいただけます：
 [タスク管理アプリ](https://task-management-application-sable.vercel.app/)
+上記のリンクからデプロイされたアプリをお試しいただけます：
+
 
 画面右上の「ゲストログイン」ボタンを押下することでゲストユーザーとしてログインできます。
 ![image](https://github.com/user-attachments/assets/2ed71cb3-ddeb-44fd-9975-fe31fdedd00f)
